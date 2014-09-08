@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B608E4AF-CCAE-453A-B9F2-1F2EEB2731CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPS.DAL</RootNamespace>
+    <AssemblyName>KPS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BuHeGePinJiLu_DAL.cs" />
+    <Compile Include="BuLiangShiJian_DAL.cs" />
+    <Compile Include="ChuKu_DAL.cs" />
+    <Compile Include="CunChu_DAL.cs" />
+    <Compile Include="GouJin_DAL.cs" />
+    <Compile Include="ProcessLogging_DAL.cs" />
+    <Compile Include="Permission_DAL.cs" />
+    <Compile Include="Manufacturer_DAL.cs" />
+    <Compile Include="ProductInfo_DAL.cs" />
+    <Compile Include="Supplier_DAL.cs" />
+    <Compile Include="Unit_DAL.cs" />
+    <Compile Include="UserInfoDAL.cs" />
+    <Compile Include="ShouHou_DAL.cs" />
+    <Compile Include="XiaoShou_DAL.cs" />
+    <Compile Include="YanShou_DAL.cs" />
+    <Compile Include="Device_DAL.cs" />
+    <Compile Include="Inventory_DAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\KPS.DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>KPS.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KPS.Model\KPS.Model.csproj">
+      <Project>{9F1A8AAA-E4EC-46B7-B10D-9FEF2A6C32A3}</Project>
+      <Name>KPS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

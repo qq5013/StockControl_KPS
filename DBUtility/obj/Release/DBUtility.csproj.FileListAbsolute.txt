@@ -1,0 +1,7 @@
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\bin\Release\PSISystem.DBUtility.dll
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\bin\Release\IBatisNet.Common.dll
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\bin\Release\IBatisNet.DataMapper.dll
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\bin\Release\MySql.Data.dll
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\bin\Release\System.Data.SQLite.DLL
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\obj\Release\ResolveAssemblyReference.cache
+F:\工作文件\项目\临时项目\录入系统\KPS\DBUtility\obj\Release\PSISystem.DBUtility.dll

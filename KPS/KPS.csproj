@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A535BC0-CABC-4256-B5BD-E1D0FAA0C03B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPS</RootNamespace>
+    <AssemblyName>KPS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IPSLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ListViewPrinter">
+      <HintPath>..\Lib\ListViewPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.4.1.23221, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfirmFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmFrm.designer.cs">
+      <DependentUpon>ConfirmFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataQueryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataQueryFrm.Designer.cs">
+      <DependentUpon>DataQueryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryForm.Designer.cs">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\ModelUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\ModelUserControl.Designer.cs">
+      <DependentUpon>ModelUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\ZDSJGJQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\ZDSJGJQueryControl.designer.cs">
+      <DependentUpon>ZDSJGJQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\QueryConditonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\QueryConditonControl.Designer.cs">
+      <DependentUpon>QueryConditonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\YS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\YS.Designer.cs">
+      <DependentUpon>YS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\ZDSJGJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\ZDSJGJ.Designer.cs">
+      <DependentUpon>ZDSJGJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\CK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\CK.Designer.cs">
+      <DependentUpon>CK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\XS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\XS.Designer.cs">
+      <DependentUpon>XS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\BHGPJL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\BHGPJL.Designer.cs">
+      <DependentUpon>BHGPJL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\SH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\SH.Designer.cs">
+      <DependentUpon>SH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\BLSJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\BLSJ.Designer.cs">
+      <DependentUpon>BLSJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\CC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\CC.Designer.cs">
+      <DependentUpon>CC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\ZLGZ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\ZLGZ.Designer.cs">
+      <DependentUpon>ZLGZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\YSQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\YSQueryControl.designer.cs">
+      <DependentUpon>YSQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\CCQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\CCQueryControl.designer.cs">
+      <DependentUpon>CCQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\XSQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\XSQueryControl.designer.cs">
+      <DependentUpon>XSQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\CKQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\CKQueryControl.designer.cs">
+      <DependentUpon>CKQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\SHQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\SHQueryControl.designer.cs">
+      <DependentUpon>SHQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\BHGPQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\BHGPQueryControl.designer.cs">
+      <DependentUpon>BHGPQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\BLSJQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\BLSJQueryControl.designer.cs">
+      <DependentUpon>BLSJQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\ZLGZQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\ZLGZQueryControl.designer.cs">
+      <DependentUpon>ZLGZQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel\InventoryQueryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryModel\InventoryQueryControl.designer.cs">
+      <DependentUpon>InventoryQueryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelSaveDiloag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelSaveDiloag.Designer.cs">
+      <DependentUpon>ExcelSaveDiloag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPrint.Designer.cs">
+      <DependentUpon>ListPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBLL\CommonFileManager.cs" />
+    <Compile Include="UIBLL\InventoryInfoListFormaterManager.cs" />
+    <Compile Include="ListFilter\BuHeGePinJiluListFilter.cs" />
+    <Compile Include="ListFilter\GouJininfoListFilter.cs" />
+    <Compile Include="ListFilter\IListFilterManager.cs" />
+    <Compile Include="ListFilter\BuLiangShiJianListFilter.cs" />
+    <Compile Include="ListFilter\ChuKuListFilter.cs" />
+    <Compile Include="ListFilter\CunChuListFilter.cs" />
+    <Compile Include="ListFilter\ProcessLoggingListFilter.cs" />
+    <Compile Include="ListFilter\ShouHouListFilter.cs" />
+    <Compile Include="ListFilter\XiaoShouListFilter.cs" />
+    <Compile Include="ListFilter\YanShouListFilter.cs" />
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleMGFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleMGFrm.Designer.cs">
+      <DependentUpon>ModuleMGFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIBLL\BuHeGePinJiLuInfoListFormatManager.cs" />
+    <Compile Include="UIBLL\BuLiangShiJianInfoListFormatManager.cs" />
+    <Compile Include="UIBLL\ChuKuInfoListFormatManager.cs" />
+    <Compile Include="UIBLL\CunChuInfoListFormatManager.cs" />
+    <Compile Include="UIBLL\DataBackManager.cs" />
+    <Compile Include="UIBLL\ExPortDataToExcel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIBLL\IListViewColumnFormater.cs" />
+    <Compile Include="UIBLL\InitListViewColumnManager.cs" />
+    <Compile Include="UIBLL\LoginManager.cs" />
+    <Compile Include="UIBLL\GouJinInfoListFormater.cs" />
+    <Compile Include="UIBLL\LoginRecordsManager.cs" />
+    <Compile Include="UIBLL\ProcessLoggingInfoListFormaterManager.cs" />
+    <Compile Include="UIBLL\SellRecordsQueryManager.cs" />
+    <Compile Include="UIBLL\ShouHouInfoListFormaterManager.cs" />
+    <Compile Include="UIBLL\UIListDataManager.cs" />
+    <Compile Include="UIBLL\UserListFormaterManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIBLL\XiaoShouInfoListFormaterManager.cs" />
+    <Compile Include="UIBLL\YanShouInfoListFormaterManager.cs" />
+    <Compile Include="UIBLL\UnitListFormaterManager.cs" />
+    <Compile Include="UIBLL\ProductInfoListFormaterManager.cs" />
+    <Compile Include="UIBLL\ManufacturerListFormaterManager.cs" />
+    <Compile Include="UIBLL\SupplierListFormaterManager.cs" />
+    <Compile Include="UIBLL\DeviceListFormaterManager.cs" />
+    <Compile Include="UIBLL\BackRecordListFormaterManager.cs" />
+    <Compile Include="UIModels\DataBaseBackInfo.cs" />
+    <Compile Include="UIModels\DeviceInstanceManager.cs" />
+    <Compile Include="UIModels\EntryType.cs" />
+    <Compile Include="UIModels\ListColumnInfo.cs" />
+    <Compile Include="UIModels\ListFilterCondition.cs" />
+    <Compile Include="UIModels\LoginStateEnum.cs" />
+    <Compile Include="UIModels\LoginUserInfo.cs" />
+    <Compile Include="DBConfigSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBConfigSetting.Designer.cs">
+      <DependentUpon>DBConfigSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIModels\SellRecordInfo.cs" />
+    <Compile Include="UnitManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitManagerFrm.Designer.cs">
+      <DependentUpon>UnitManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoMGFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfoMGFrm.Designer.cs">
+      <DependentUpon>UserInfoMGFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChangeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChangeFrm.Designer.cs">
+      <DependentUpon>PasswordChangeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductManagerFrm.Designer.cs">
+      <DependentUpon>ProductManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupperManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupperManagerFrm.Designer.cs">
+      <DependentUpon>SupperManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufacturerFrm.Designer.cs">
+      <DependentUpon>ManufacturerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceTypeManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceTypeManagerFrm.Designer.cs">
+      <DependentUpon>DeviceTypeManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBackRevFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBackRevFrm.Designer.cs">
+      <DependentUpon>DataBackRevFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellRecordsQueryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellRecordsQueryFrm.Designer.cs">
+      <DependentUpon>SellRecordsQueryFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfirmFrm.resx">
+      <DependentUpon>ConfirmFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataQueryFrm.resx">
+      <DependentUpon>DataQueryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\ZDSJGJQueryControl.resx">
+      <DependentUpon>ZDSJGJQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\YS.resx">
+      <DependentUpon>YS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\ZDSJGJ.resx">
+      <DependentUpon>ZDSJGJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\CK.resx">
+      <DependentUpon>CK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\XS.resx">
+      <DependentUpon>XS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\BHGPJL.resx">
+      <DependentUpon>BHGPJL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\SH.resx">
+      <DependentUpon>SH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\BLSJ.resx">
+      <DependentUpon>BLSJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\CC.resx">
+      <DependentUpon>CC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\ZLGZ.resx">
+      <DependentUpon>ZLGZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\YSQueryControl.resx">
+      <DependentUpon>YSQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\CCQueryControl.resx">
+      <DependentUpon>CCQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\XSQueryControl.resx">
+      <DependentUpon>XSQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\CKQueryControl.resx">
+      <DependentUpon>CKQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\SHQueryControl.resx">
+      <DependentUpon>SHQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\BHGPQueryControl.resx">
+      <DependentUpon>BHGPQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\BLSJQueryControl.resx">
+      <DependentUpon>BLSJQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\ZLGZQueryControl.resx">
+      <DependentUpon>ZLGZQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryModel\InventoryQueryControl.resx">
+      <DependentUpon>InventoryQueryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelSaveDiloag.resx">
+      <DependentUpon>ExcelSaveDiloag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleMGFrm.resx">
+      <DependentUpon>ModuleMGFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="DBConfigSetting.resx">
+      <DependentUpon>DBConfigSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPrint.resx">
+      <DependentUpon>ListPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitManagerFrm.resx">
+      <DependentUpon>UnitManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoMGFrm.resx">
+      <DependentUpon>UserInfoMGFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChangeFrm.resx">
+      <DependentUpon>PasswordChangeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductManagerFrm.resx">
+      <DependentUpon>ProductManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupperManagerFrm.resx">
+      <DependentUpon>SupperManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturerFrm.resx">
+      <DependentUpon>ManufacturerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceTypeManagerFrm.resx">
+      <DependentUpon>DeviceTypeManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBackRevFrm.resx">
+      <DependentUpon>DataBackRevFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellRecordsQueryFrm.resx">
+      <DependentUpon>SellRecordsQueryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="help.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBaseBackLog.xml" />
+    <Content Include="InventoryPrintModel.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GJListPrintModel.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Images\button_1.png" />
+    <Content Include="GJPrintModel.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\button_2.png" />
+    <Content Include="Images\Loginbg.jpg" />
+    <Content Include="ListPrintModel.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LoginInfo.xml" />
+    <None Include="Images\ItemDel.png" />
+    <None Include="Images\ItemEdit.png" />
+    <Content Include="Images\loginUI.png" />
+    <Content Include="Images\MainBgImg_V.png" />
+    <Content Include="Images\MainBgImg_V02.png" />
+    <Content Include="Images\MainHead2.png" />
+    <Content Include="Images\Tip1.png" />
+    <Content Include="Images\Tip2.png" />
+    <Content Include="Images\Tip3.png" />
+    <Content Include="Images\Tip4.png" />
+    <Content Include="Images\Tip5.png" />
+    <Content Include="IPSLogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\KPS.DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>KPS.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KPS.BLL\KPS.BLL.csproj">
+      <Project>{28080595-25A5-4B62-8D6A-1139CC5D3F59}</Project>
+      <Name>KPS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KPS.Model\KPS.Model.csproj">
+      <Project>{9F1A8AAA-E4EC-46B7-B10D-9FEF2A6C32A3}</Project>
+      <Name>KPS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkinForm\SkinForm.csproj">
+      <Project>{3EA4B685-F7F7-4592-85C2-67E1D4A70F87}</Project>
+      <Name>SkinForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

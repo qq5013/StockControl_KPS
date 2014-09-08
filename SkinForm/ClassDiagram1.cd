@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="微软雅黑" Size="9" />
+  <Class Name="CSharpWin.AntiAliasGraphics" BaseTypeListCollapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AntiAliasGraphics.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CSharpWin.ControlBoxManager" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="7" Width="3" />
+    <TypeIdentifier>
+      <FileName>ControlBoxManager.cs</FileName>
+      <HashCode>AAIAgITEACIAAAAAEAAABAAQhAACUAIBAABAAIEAAAI=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CSharpWin.ControlPaintEx">
+    <Position X="6.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ControlPaintEx.cs</FileName>
+      <HashCode>AAAAAAAAAAgAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.GraphicsPathHelper">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GraphicsPathHelper.cs</FileName>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.NativeMethods">
+    <Position X="10.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NativeMethods.cs</FileName>
+      <HashCode>AAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAAAEAAAAYAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="CSharpWin.NativeMethods.NCHITTEST" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="CSharpWin.NativeMethods.WindowMessages" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="CSharpWin.NativeMethods.RECT" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="CSharpWin.NativeMethods.WindowStyleEx" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="CSharpWin.NativeMethods.MINMAXINFO" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="CSharpWin.NativeMethods.NCCALCSIZE_PARAMS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="CSharpWin.NativeMethods.WindowStyle" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="CSharpWin.NativeMethods.WINDOWPOS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="CSharpWin.NativeMethods.SystemCommands" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NativeMethods.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="CSharpWin.RenderHelper">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RenderHelper.cs</FileName>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.SkinForm">
+    <Position X="0.5" Y="6.25" Width="3.75" />
+    <TypeIdentifier>
+      <FileName>SkinForm.cs</FileName>
+      <HashCode>DiWIoBQIAaABKAAAEABImAsCFFBECAQI4AKaSAkiACI=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ControlBoxManager" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="CSharpWin.SkinFormBackgroundRenderEventArgs">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormBackgroundRenderEvent.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.SkinFormBorderRenderEventArgs">
+    <Position X="10.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>SkinFormBorderRenderEvent.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgCAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.SkinFormCaptionRenderEventArgs">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormCaptionRenderEvent.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgCAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.SkinFormColorTable">
+    <Position X="9" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>SkinFormColorTable.cs</FileName>
+      <HashCode>AQgAAgAIBAwBgA4AAFAEIAEQAAwAAgAAQACAAAIABAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="CSharpWin.SkinFormControlBoxRenderEventArgs">
+    <Position X="8.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>SkinFormControlBoxRenderEvent.cs</FileName>
+      <HashCode>AACAAQAAAAAAAAAAAAAAAAAAAAABAAAgAAAQAAEBBAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpWin.SkinFormProfessionalRenderer">
+    <Position X="3.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>SkinFormProfessionalRenderer.cs</FileName>
+      <HashCode>AIgAIEOAIgAEQBEAAAAAIAAAgEAAAIAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="CSharpWin.SkinFormRenderer">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormRenderer.cs</FileName>
+      <HashCode>AEAAIACAAAAEQBAAAABAICAkkwAAgAAAQABgAgAAgAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Enum Name="CSharpWin.ControlBoxState">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ControlBoxState.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CSharpWin.ControlBoxStyle">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ControlBoxStyle.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAGAAgA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CSharpWin.MouseOperate">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MouseOperate.cs</FileName>
+      <HashCode>AAAAAAIAAIAAAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CSharpWin.RoundStyle">
+    <Position X="12" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RoundStyle.cs</FileName>
+      <HashCode>AgAAAAAIAAAAAAAAAAAQAAAAAAAIAAAACICAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="CSharpWin.SkinFormBackgroundRenderEventHandler">
+    <Position X="9.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormBackgroundRenderEvent.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="CSharpWin.SkinFormBorderRenderEventHandler" Collapsed="true">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormBorderRenderEvent.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="CSharpWin.SkinFormCaptionRenderEventHandler">
+    <Position X="11" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormCaptionRenderEvent.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="CSharpWin.SkinFormControlBoxRenderEventHandler">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SkinFormControlBoxRenderEvent.cs</FileName>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+</ClassDiagram>
