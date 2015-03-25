@@ -30,3 +30,11 @@ F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.DAL\bin\Release\K
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.DAL\obj\Release\KPS.DAL.csprojResolveAssemblyReference.cache
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.DAL\obj\Release\KPS.DAL.dll
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.DAL\obj\Release\KPS.DAL.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\bin\Release\KPS.DAL.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\bin\Release\KPS.DAL.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\bin\Release\KPS.Model.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\bin\Release\PSISystem.DBUtility.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\bin\Release\KPS.Model.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\obj\Release\KPS.DAL.csprojResolveAssemblyReference.cache
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\obj\Release\KPS.DAL.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.DAL\obj\Release\KPS.DAL.pdb

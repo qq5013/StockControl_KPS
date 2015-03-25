@@ -482,9 +482,6 @@
     <Content Include="InventoryPrintModel.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GJListPrintModel.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Images\button_1.png" />
     <Content Include="GJPrintModel.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

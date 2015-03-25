@@ -16,3 +16,7 @@ F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.Model\bin\Release
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.Model\bin\Release\KPS.Model.pdb
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.Model\obj\Release\KPS.Model.dll
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.Model\obj\Release\KPS.Model.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.Model\bin\Release\KPS.Model.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.Model\bin\Release\KPS.Model.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.Model\obj\Release\KPS.Model.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.Model\obj\Release\KPS.Model.pdb

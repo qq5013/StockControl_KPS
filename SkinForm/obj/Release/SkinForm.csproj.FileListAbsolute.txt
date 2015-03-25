@@ -46,4 +46,9 @@ F:\工作文件\项目\临时项目\库存管理系统\KPS\SkinForm\obj\Release\
 F:\工作文件\项目\临时项目\库存管理系统\KPS\SkinForm\obj\Release\SkinForm.csproj.GenerateResource.Cache
 F:\工作文件\项目\临时项目\库存管理系统\KPS\SkinForm\obj\Release\SkinForm.dll
 F:\工作文件\项目\临时项目\库存管理系统\KPS\SkinForm\obj\Release\SkinForm.pdb
-F:\工作文件\项目\临时项目\库存管理系统\KPS\SkinForm\obj\Release\SkinForm.csprojResolveAssemblyReference.cache
+C:\Users\wanli\Desktop\KPS_20131008\SkinForm\bin\Release\SkinForm.dll
+C:\Users\wanli\Desktop\KPS_20131008\SkinForm\bin\Release\SkinForm.pdb
+C:\Users\wanli\Desktop\KPS_20131008\SkinForm\obj\Release\CSharpWin.SkinForm.resources
+C:\Users\wanli\Desktop\KPS_20131008\SkinForm\obj\Release\SkinForm.csproj.GenerateResource.Cache
+C:\Users\wanli\Desktop\KPS_20131008\SkinForm\obj\Release\SkinForm.dll
+C:\Users\wanli\Desktop\KPS_20131008\SkinForm\obj\Release\SkinForm.pdb

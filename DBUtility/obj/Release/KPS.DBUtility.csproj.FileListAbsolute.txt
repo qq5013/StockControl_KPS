@@ -20,4 +20,5 @@ F:\工作文件\项目\临时项目\库存管理系统\KPS\综合版本\DBUtilit
 F:\工作文件\项目\临时项目\库存管理系统\KPS\综合版本\DBUtility\obj\Release\PSISystem.DBUtility.dll
 F:\工作文件\项目\临时项目\库存管理系统\KPS\DBUtility\bin\Release\PSISystem.DBUtility.dll
 F:\工作文件\项目\临时项目\库存管理系统\KPS\DBUtility\obj\Release\PSISystem.DBUtility.dll
-F:\工作文件\项目\临时项目\库存管理系统\KPS\DBUtility\obj\Release\KPS.DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\wanli\Desktop\KPS_20131008\DBUtility\bin\Release\PSISystem.DBUtility.dll
+C:\Users\wanli\Desktop\KPS_20131008\DBUtility\obj\Release\PSISystem.DBUtility.dll

@@ -48,7 +48,7 @@
             this.TolMenuSaveAS = new System.Windows.Forms.ToolStripMenuItem();
             this.TolMenuSaveAS_ALL = new System.Windows.Forms.ToolStripMenuItem();
             this.TolMenuSaveAS_Selected = new System.Windows.Forms.ToolStripMenuItem();
-            this.TolMenuPrint = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintTol_List = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ListItem_Edit = new System.Windows.Forms.ToolStripMenuItem();
@@ -217,7 +217,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TolMenuSaveAS,
-            this.TolMenuPrint});
+            this.打印ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(952, 25);
@@ -247,14 +247,13 @@
             this.TolMenuSaveAS_Selected.Text = "2.导出选中项";
             this.TolMenuSaveAS_Selected.Click += new System.EventHandler(this.TolMenuSaveAS_Selected_Click);
             // 
-            // TolMenuPrint
+            // 打印ToolStripMenuItem
             // 
-            this.TolMenuPrint.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.打印ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PrintTol_List});
-            this.TolMenuPrint.Name = "TolMenuPrint";
-            this.TolMenuPrint.Size = new System.Drawing.Size(44, 21);
-            this.TolMenuPrint.Text = "打印";
-            this.TolMenuPrint.Visible = false;
+            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
+            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.打印ToolStripMenuItem.Text = "打印";
             // 
             // PrintTol_List
             // 
@@ -374,7 +373,7 @@
         private System.Windows.Forms.Label lblMatrixbar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox CmboxDeviceClass;
-        private System.Windows.Forms.ToolStripMenuItem TolMenuPrint;
+        private System.Windows.Forms.ToolStripMenuItem 打印ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PrintTol_List;
         private BrightIdeasSoftware.ListViewPrinter listViewPrinter1;
     }

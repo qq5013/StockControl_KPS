@@ -26,6 +26,8 @@ namespace KPS.Model
 		private string _p_jsr;
         private int _DataType=0;
         private string _remarkInfo;
+        private string _reconfirm;
+        private DateTime? _p_valid;
 
 		/// <summary>
 		/// 主键编号                   购进表
@@ -156,6 +158,22 @@ namespace KPS.Model
         {
             get { return _remarkInfo; }
             set { _remarkInfo = value; }
+        }
+        /// <summary>
+        /// 复核人
+        /// </summary>
+        public string Reconfirm
+        {
+            get { return _reconfirm; }
+            set { _reconfirm = value; }
+        }
+        /// <summary>
+        /// 有效期
+        /// </summary>
+        public DateTime? p_valid
+        {
+            get { return _p_valid; }
+            set { _p_valid = value; }
         }
 		#endregion Model
 

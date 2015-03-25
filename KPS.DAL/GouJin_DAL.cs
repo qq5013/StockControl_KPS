@@ -45,9 +45,9 @@ namespace KPS.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PSI_GouJin(");
-            strSql.Append("p_date,p_cpmc,p_ggxh,p_clmc,p_ph,p_dw,p_sl1,p_mjph,p_zzs,p_zczh,p_gys,p_sl2,p_jsr,DataType,RemarkInfo)");
+            strSql.Append("p_date,p_cpmc,p_ggxh,p_clmc,p_ph,p_dw,p_sl1,p_mjph,p_zzs,p_zczh,p_gys,p_sl2,p_jsr,DataType,RemarkInfo,p_valid,Reconfirm)");
 			strSql.Append(" values (");
-            strSql.Append("@p_date,@p_cpmc,@p_ggxh,@p_clmc,@p_ph,@p_dw,@p_sl1,@p_mjph,@p_zzs,@p_zczh,@p_gys,@p_sl2,@p_jsr,@DataType,@RemarkInfo)");
+            strSql.Append("@p_date,@p_cpmc,@p_ggxh,@p_clmc,@p_ph,@p_dw,@p_sl1,@p_mjph,@p_zzs,@p_zczh,@p_gys,@p_sl2,@p_jsr,@DataType,@RemarkInfo,@p_valid,@Reconfirm)");
 			OleDbParameter[] parameters = {
 					new OleDbParameter("@p_date", OleDbType.Date),
 					new OleDbParameter("@p_cpmc", OleDbType.VarChar,255),
@@ -63,7 +63,10 @@ namespace KPS.DAL
 					new OleDbParameter("@p_sl2", OleDbType.VarChar,255),
 					new OleDbParameter("@p_jsr", OleDbType.VarChar,255),
                     new OleDbParameter("@DataType", OleDbType.Integer,4),
-                    new OleDbParameter("@RemarkInfo", OleDbType.VarChar,255)};
+                    new OleDbParameter("@RemarkInfo", OleDbType.VarChar,255),
+                    new OleDbParameter("@p_valid", OleDbType.Date),//有效期
+                    new OleDbParameter("@Reconfirm", OleDbType.VarChar,255)//复核人
+                   };
 			parameters[0].Value = model.p_date;
 			parameters[1].Value = model.p_cpmc;
 			parameters[2].Value = model.p_ggxh;
@@ -79,6 +82,8 @@ namespace KPS.DAL
 			parameters[12].Value = model.p_jsr;
             parameters[13].Value = model.DataType;
             parameters[14].Value = model.RemarkInfo;
+            parameters[15].Value = model.p_valid;//有效期
+            parameters[16].Value = model.Reconfirm;//复核人
 
 			int rows=DbHelperOleDb.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -111,7 +116,9 @@ namespace KPS.DAL
 			strSql.Append("p_sl2=@p_sl2,");
 			strSql.Append("p_jsr=@p_jsr,");
             strSql.Append("DataType=@DataType,");
-            strSql.Append("RemarkInfo=@RemarkInfo");
+            strSql.Append("RemarkInfo=@RemarkInfo,");
+            strSql.Append("p_valid=@p_valid,");//有效期
+            strSql.Append("Reconfirm=@Reconfirm");//复核人
 			strSql.Append(" where ID=@ID");
 			OleDbParameter[] parameters = {
 					new OleDbParameter("@p_date", OleDbType.Date),
@@ -129,6 +136,8 @@ namespace KPS.DAL
 					new OleDbParameter("@p_jsr", OleDbType.VarChar,255),
 					new OleDbParameter("@DataType", OleDbType.Integer,4),
                     new OleDbParameter("@RemarkInfo", OleDbType.VarChar,255),
+                    new OleDbParameter("@p_valid", OleDbType.Date),//有效期
+                    new OleDbParameter("@Reconfirm", OleDbType.VarChar,255),//复核人
 					new OleDbParameter("@ID", OleDbType.Integer,4)};
 			parameters[0].Value = model.p_date;
 			parameters[1].Value = model.p_cpmc;
@@ -145,7 +154,9 @@ namespace KPS.DAL
 			parameters[12].Value = model.p_jsr;
             parameters[13].Value = model.DataType;
 			parameters[14].Value = model.RemarkInfo;
-            parameters[15].Value = model.ID;
+            parameters[15].Value = model.p_valid;//有效期
+            parameters[16].Value = model.Reconfirm;//复核人
+            parameters[17].Value = model.ID;
 
 			int rows=DbHelperOleDb.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -273,6 +284,14 @@ namespace KPS.DAL
 				{
 					model.RemarkInfo=row["RemarkInfo"].ToString();
 				}
+                if (row["p_valid"] != null)
+                {
+                    model.p_valid = DateTime.Parse(row["p_valid"].ToString());
+                }
+                if (row["Reconfirm"] != null)
+                {
+                    model.Reconfirm = row["Reconfirm"].ToString();
+                }
 			}
 			return model;
 		}
@@ -283,7 +302,7 @@ namespace KPS.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-            strSql.Append("select ID,p_date,p_cpmc,p_ggxh,p_clmc,p_ph,p_dw,p_sl1,p_mjph,p_zzs,p_zczh,p_gys,p_sl2,p_jsr,DataType,RemarkInfo ");
+            strSql.Append("select ID,p_date,p_cpmc,p_ggxh,p_clmc,p_ph,p_dw,p_sl1,p_mjph,p_zzs,p_zczh,p_gys,p_sl2,p_jsr,DataType,RemarkInfo,p_valid,Reconfirm");
 			strSql.Append(" FROM PSI_GouJin ");
 			if(strWhere.Trim()!="")
 			{

@@ -77,7 +77,6 @@ namespace KPS
                 case EntryType.ZDSJGJ:
                     _conditoncontrol = new EntryModel.ZDSJGJQueryControl(ThisDevice);
                     strThisTitleTxt = "购进";
-                    TolMenuPrint.Visible = true;
                     break;
                 case EntryType.YS:
                     _conditoncontrol = new EntryModel.YSQueryControl(ThisDevice);
@@ -90,7 +89,6 @@ namespace KPS
                 case EntryType.XS:
                     _conditoncontrol = new EntryModel.XSQueryControl(ThisDevice);
                     strThisTitleTxt = "销售";
-                    TolMenuPrint.Visible = true;
                     break;
                 case EntryType.CK:
                     _conditoncontrol = new EntryModel.CKQueryControl(ThisDevice);
@@ -311,6 +309,7 @@ namespace KPS
             ColumnArray.Add(new ListColumnInfo("供应商", "p_gys", 120, HorizontalAlignment.Left, true));
             ColumnArray.Add(new ListColumnInfo("灭菌批号", "p_mjph", 100, HorizontalAlignment.Left, true));
             ColumnArray.Add(new ListColumnInfo("批号(系列号)", "p_ph", 100, HorizontalAlignment.Left, true));
+            ColumnArray.Add(new ListColumnInfo("有效期", "p_valid", 120, HorizontalAlignment.Left, true));
             ColumnArray.Add(new ListColumnInfo("数量", "p_sl1", 60, HorizontalAlignment.Left, true));
 
             ColumnArray.Add(new ListColumnInfo("进价", "p_sl2", 60, HorizontalAlignment.Left, true));
@@ -320,6 +319,7 @@ namespace KPS
             ColumnArray.Add(new ListColumnInfo("注册证号", "p_zczh", 120, HorizontalAlignment.Left, true));
             ColumnArray.Add(new ListColumnInfo("生产商", "p_zzs", 120, HorizontalAlignment.Left, true));
             ColumnArray.Add(new ListColumnInfo("经手人", "p_jsr", 100, HorizontalAlignment.Left, true));
+            ColumnArray.Add(new ListColumnInfo("复核人", "Reconfirm", 100, HorizontalAlignment.Left, true));
             return ColumnArray;
 
         }
@@ -1191,38 +1191,35 @@ namespace KPS
         /// <param name="e"></param>
         private void PrintTol_List_Click(object sender, EventArgs e)
         {
-            //if (ThisType == EntryType.Inventory)
-            //{
-            //    if(ThisList is List<Model.GouJinInfo>)
-            //    {
-            //        ListPrint print = new ListPrint((List<Model.GouJinInfo>)ThisList);
-            //        print.ShowDialog();
-            //    }
+            if (ThisType == EntryType.Inventory)
+            {
+                if(ThisList is List<Model.GouJinInfo>)
+                {
+                    ListPrint print = new ListPrint((List<Model.GouJinInfo>)ThisList);
+                    print.ShowDialog();
+                }
                
-            //}
-            //else
-            //{
-            //    this.listViewPrinter1.CellFormat = null;
-            //    this.listViewPrinter1.ListFont = new Font("Ms Sans Serif", 9);
-            //    this.listViewPrinter1.ListGridPen = new Pen(Color.DarkGray, 0.5f);
+            }
+            else
+            {
+                this.listViewPrinter1.CellFormat = null;
+                this.listViewPrinter1.ListFont = new Font("Ms Sans Serif", 9);
+                this.listViewPrinter1.ListGridPen = new Pen(Color.DarkGray, 0.5f);
 
-            //    this.listViewPrinter1.HeaderFormat = BlockFormat.Header(new Font("Verdana", 24, FontStyle.Bold));
-            //    this.listViewPrinter1.HeaderFormat.BackgroundBrush = new LinearGradientBrush(new Rectangle(0, 0, 1, 1), Color.DarkBlue, Color.White, LinearGradientMode.Horizontal);
+                this.listViewPrinter1.HeaderFormat = BlockFormat.Header(new Font("Verdana", 24, FontStyle.Bold));
+                this.listViewPrinter1.HeaderFormat.BackgroundBrush = new LinearGradientBrush(new Rectangle(0, 0, 1, 1), Color.DarkBlue, Color.White, LinearGradientMode.Horizontal);
 
-            //    this.listViewPrinter1.FooterFormat = BlockFormat.Footer();
-            //    this.listViewPrinter1.FooterFormat.BackgroundBrush = new LinearGradientBrush(new Rectangle(0, 0, 1, 1), Color.White, Color.DarkBlue, LinearGradientMode.Horizontal);
+                this.listViewPrinter1.FooterFormat = BlockFormat.Footer();
+                this.listViewPrinter1.FooterFormat.BackgroundBrush = new LinearGradientBrush(new Rectangle(0, 0, 1, 1), Color.White, Color.DarkBlue, LinearGradientMode.Horizontal);
 
-            //    this.listViewPrinter1.GroupHeaderFormat = BlockFormat.GroupHeader();
-            //    this.listViewPrinter1.ListHeaderFormat = BlockFormat.ListHeader(new Font("Verdana", 12));
+                this.listViewPrinter1.GroupHeaderFormat = BlockFormat.GroupHeader();
+                this.listViewPrinter1.ListHeaderFormat = BlockFormat.ListHeader(new Font("Verdana", 12));
 
-            //    this.listViewPrinter1.WatermarkFont = null;
-            //    this.listViewPrinter1.WatermarkColor = Color.Empty;
+                this.listViewPrinter1.WatermarkFont = null;
+                this.listViewPrinter1.WatermarkColor = Color.Empty;
 
-            //    this.listViewPrinter1.PrintPreview();
-            //}
-
-            ListPrint newprint = new ListPrint(ThisList);
-            newprint.ShowDialog();
+                this.listViewPrinter1.PrintPreview();
+            }
         }
 
     }

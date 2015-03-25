@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .tablesty{width:100%;height:auto; border:1px solid #cccccc;border-collapse:collapse;font-size:12px; }
+        .tablesty td{border:1px solid #cccccc;border-collapse:collapse;font-size:12px; }
+        .style3
+        {
+            width: 120px;
+        }
+        .style5
+        {
+            width: 89px;
+        }
+        .style7
+        {
+            width: 56px;
+        }
+        .style8
+        {
+            width: 120px;
+        }
+        .style10
+        {
+            width: 115px;
+        }
+        .style11
+        {
+            width: 90px;
+        }
+        .style12
+        {
+            width: 77px;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+    <table style="width:85%; height: auto;font-size:12px;margin:0px auto;">
+        <tr>
+            <td style="text-align: center;height:45px; font-size:18px; font-weight:bold;" colspan="8">
+                进货入库单
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                供货商：
+            </td>
+            <td class="style11">
+               <div style="width:80px; border-bottom:solid 1px #000000;"></div>
+            </td>
+            <td style="text-align:right;">
+            </td>
+            <td class="style10" >
+            </td>
+            <td style="text-align:right; " class="style12">
+            </td>
+            <td>
+            </td>
+            <td style="text-align:right;">
+            入库日期：
+            </td>
+            <td><div style="border-bottom:solid 1px #000000;">$$DateReplace</div>
+            </td>
+        </tr>
+        <tr><td colspan="8">&nbsp;</td></tr>
+        <tr>
+            <td colspan="8">
+                <table id="ListContent" class="tablesty">$$Replace</table>
+            </td>
+        </tr>
+        <tr><td colspan="8">&nbsp;</td></tr>
+        <tr>
+        <td style="text-align:right;">备注：</td>
+        <td colspan="7"><div style="width:95%; border-bottom:solid 1px #000000;"></div></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <table style="font-size:12px; ">
+                    <tr>
+                         <td style="text-align:right;">
+                             制单：
+                        </td>
+                        <td><div style="width:50px; border-bottom:solid 1px #000000;"></div>
+                        </td>
+                        <td style="text-align:right;">
+                            提货人：
+                        </td>
+                        <td><div style="width:50px; border-bottom:solid 1px #000000;"></div>
+                        </td>
+                         <td >
+                            保管：
+                        </td>
+                        <td>
+                        <div style="width:50px; border-bottom:solid 1px #000000;"></div>
+                        </td>
+                         <td >
+                            复核：
+                        </td>
+                        <td>
+                        <div style="width:50px; border-bottom:solid 1px #000000;"></div>
+                        </td>
+                         <td >
+                            金额合计：
+                        </td>
+                        <td>
+                        <div style="width:50px; border-bottom:solid 1px #000000;">$$MoneyReplace</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -112,7 +112,7 @@ namespace KPS
                 case UIModels.EntryType.ZDSJGJ:
                     ThisFromTitle = "购进";
                     _control = new EntryModel.ZDSJGJ((GouJinInfo)ModelData);
-                   //btnPrint.Visible = true;
+                    btnPrint.Visible = true;
                     break;
                 case UIModels.EntryType.YS:
                     ThisFromTitle = "验收";

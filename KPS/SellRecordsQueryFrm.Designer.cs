@@ -512,14 +512,14 @@
             // TolMenuSaveAS_ALL
             // 
             this.TolMenuSaveAS_ALL.Name = "TolMenuSaveAS_ALL";
-            this.TolMenuSaveAS_ALL.Size = new System.Drawing.Size(146, 22);
+            this.TolMenuSaveAS_ALL.Size = new System.Drawing.Size(152, 22);
             this.TolMenuSaveAS_ALL.Text = "1.导出所有项";
             this.TolMenuSaveAS_ALL.Click += new System.EventHandler(this.TolMenuSaveAS_ALL_Click);
             // 
             // TolMenuSaveAS_Selected
             // 
             this.TolMenuSaveAS_Selected.Name = "TolMenuSaveAS_Selected";
-            this.TolMenuSaveAS_Selected.Size = new System.Drawing.Size(146, 22);
+            this.TolMenuSaveAS_Selected.Size = new System.Drawing.Size(152, 22);
             this.TolMenuSaveAS_Selected.Text = "2.导出选中项";
             this.TolMenuSaveAS_Selected.Click += new System.EventHandler(this.TolMenuSaveAS_Selected_Click);
             // 
@@ -530,7 +530,6 @@
             this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
             this.打印ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.打印ToolStripMenuItem.Text = "打印";
-            this.打印ToolStripMenuItem.Visible = false;
             // 
             // PrintTol_List
             // 

@@ -68,6 +68,12 @@ namespace KPS.UIBLL
                     case "ToltalMoney":
                          column.AspectGetter = delegate(object x) { return TotalMoney((GouJinInfo)x); };
                         break;
+                    case "p_valid":
+                        column.AspectGetter = delegate(object x) { return ((GouJinInfo)x).p_valid.Value.ToString("yyyy-MM-dd HH:mm:ss"); };
+                        break;
+                    case "Reconfirm":
+                        column.AspectGetter = delegate(object x) { return ((GouJinInfo)x).Reconfirm; };
+                        break;
                     default:
                         column.AspectGetter = delegate(object x) { return ""; };
                         break;

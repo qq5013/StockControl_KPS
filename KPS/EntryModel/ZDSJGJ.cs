@@ -63,7 +63,8 @@ namespace KPS.EntryModel
             gjinfo.p_zczh = string.Format("食药监械({0})字 第({1})号", textBox7.Text.Trim(),textBox3.Text.Trim());
             gjinfo.p_zzs = textBox4.Text.Trim();
             gjinfo.RemarkInfo = txtRemark.Text.Trim();//备注信息
-
+            gjinfo.Reconfirm = txtreconfirm.Text.Trim();//复核人
+            gjinfo.p_valid = dtimevalid.Value;//有效期
             return gjinfo;
         }
 
@@ -140,6 +141,8 @@ namespace KPS.EntryModel
                 textBox3.Text = _ThisModel.p_zczh.Substring(_ThisModel.p_zczh.IndexOf("第") + 2,(_ThisModel.p_zczh.IndexOf("号") - _ThisModel.p_zczh.IndexOf("第")-3));
                 textBox4.Text = _ThisModel.p_zzs;
                 txtRemark.Text = _ThisModel.RemarkInfo;
+                txtreconfirm.Text = _ThisModel.Reconfirm;//复核人
+                dtimevalid.Value = (DateTime)_ThisModel.p_date;//有效期
             }
            
         }

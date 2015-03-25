@@ -38,3 +38,13 @@ F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.BLL\bin\Release\K
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.BLL\obj\Release\KPS.BLL.csprojResolveAssemblyReference.cache
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.BLL\obj\Release\KPS.BLL.dll
 F:\工作文件\项目\临时项目\库存管理系统\KPS\KPS.BLL\obj\Release\KPS.BLL.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\KPS.BLL.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\KPS.BLL.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\KPS.DAL.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\KPS.Model.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\PSISystem.DBUtility.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\KPS.DAL.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\bin\Release\KPS.Model.pdb
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\obj\Release\KPS.BLL.csprojResolveAssemblyReference.cache
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\obj\Release\KPS.BLL.dll
+C:\Users\wanli\Desktop\KPS_20131008\KPS.BLL\obj\Release\KPS.BLL.pdb

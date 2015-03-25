@@ -14,23 +14,17 @@ namespace KPS
 {
     public partial class ListPrint:SkinForm
     {
-        private List<XiaoShouInfo> listitems;
+        private List<SellRecordInfo> listitems;
         private KPS.Model.GouJinInfo goujininfo;
         private List<GouJinInfo> inventorylist;
         public ListPrint(System.Collections.ICollection _recors)
         {
-           
-            InitializeComponent();
-            if (_recors is List<XiaoShouInfo>)
+            if (_recors is List<SellRecordInfo>)
             {
-                listitems = (List<XiaoShouInfo>)_recors;
-                PrintSellRecordList();//打印销售列表
+                listitems = (List<SellRecordInfo>)_recors;
             }
-            else if (_recors is List<GouJinInfo>) {
-                inventorylist = (List<GouJinInfo>)_recors;
-                PrintGouJinList();
-            }
-            
+            InitializeComponent();
+            PrintSellRecordList();//打印销售列表
         }
         /// <summary>
         /// 库存记录
@@ -52,7 +46,6 @@ namespace KPS
             InitializeComponent();
             PrintGouJinInfo();//打印购进记录信息
         }
-
 
         /// <summary>
         /// 页面窗体加载
@@ -83,6 +76,9 @@ namespace KPS
             strHTML=strHTML.Replace("$htmlformat[12]", goujininfo.p_jsr);
             strHTML=strHTML.Replace("$htmlformat[13]", TotalMoney(goujininfo.p_sl1.Value,Convert.ToDouble(goujininfo.p_sl2)));
             strHTML=strHTML.Replace("$htmlformat[14]", goujininfo.RemarkInfo);
+            strHTML = strHTML.Replace("$htmlformat[15]", goujininfo.p_date.Value.ToString("yyyy年MM月dd日"));//有效期
+            strHTML = strHTML.Replace("$htmlformat[16]", goujininfo.Reconfirm);//复核人
+
             string strAbstrctPageURL = "file://" + UIBLL.CommonFileManager.Instance.CreateTempFile(strHTML, "SellRecord20130921.html");
             this.webBrowser1.Navigate(strAbstrctPageURL);
         }
@@ -110,26 +106,37 @@ namespace KPS
             if (listitems != null && listitems.Count > 0)
             {
                 #region  组织表格填充内容
-                HTMLContent.Append("<tr><td>NO</dt><td>生产厂家</dt><td>品名</dt><td>规格型号</dt><td>批号</dt><td>单位</dt><td>注册证号</dt><td>单价</dt><td>数量</dt><td>金额(￥)</dt></tr>");
-                foreach (XiaoShouInfo _item in listitems)
+                string strTotalTypeName = "客户名称";
+                switch (listitems[0].SType)
+                {
+                    case SellTotalType.Customer:
+                        strTotalTypeName = "客户名称";
+                        break;
+                    case SellTotalType.Product:
+                        strTotalTypeName = "产品名称";
+                        break;
+                    case SellTotalType.ProductAndType:
+                        strTotalTypeName = "产品名称+规格型号";
+                        break;
+                    default:
+                        strTotalTypeName = "产品名称";
+                        break;
+                }
+
+                HTMLContent.Append("<tr><td>NO</dt><td>" + strTotalTypeName + "</dt><td>数量</dt><td>金额（￥）</dt><td>毛利（￥）</dt></tr>");
+                foreach (SellRecordInfo _item in listitems)
                 {
                     HTMLContent.Append("<tr>");
-                    HTMLContent.Append("<td>" + _item.ID + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_zzs + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_cpmc+ "</td>");
-                    HTMLContent.Append("<td>" + _item.p_ggxh + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_ph + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_dw + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_zczh + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_sl2 + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_sl1.Value + "</td>");
-                    HTMLContent.Append("<td>" + TotalMoney(_item.p_sl1.Value,Convert.ToDouble(_item.p_sl2))+ "</td>");
+                    HTMLContent.Append("<td>" + _item.SortNo + "</td>");
+                    HTMLContent.Append("<td>" + _item.SGroupName + "</td>");
+                    HTMLContent.Append("<td>" + _item.STotalNumber + "</td>");
+                    HTMLContent.Append("<td>" + _item.STotalMoney + "</td>");
+                    HTMLContent.Append("<td>" + _item.SProfit + "</td>");
                     HTMLContent.Append("</tr>");
                 }
                 #endregion
             }
-            strHTML = strHTML.Replace("$$ReplaceDate",DateTime.Now.ToString("yyyy-MM-dd"));
-            strHTML=strHTML.Replace("$$Replace", HTMLContent.ToString());
+            strHTML = strHTML=strHTML.Replace("$$Replace", HTMLContent.ToString());
 
             string strAbstrctPageURL = "file://" + UIBLL.CommonFileManager.Instance.CreateTempFile(strHTML, "SellRecord20130921.html");
             this.webBrowser1.Navigate(strAbstrctPageURL);
@@ -167,45 +174,6 @@ namespace KPS
             string strAbstrctPageURL = "file://" + UIBLL.CommonFileManager.Instance.CreateTempFile(strHTML, "SellRecord20130921.html");
             this.webBrowser1.Navigate(strAbstrctPageURL);
         }
-
-        /// <summary>
-        /// 打印购进列表
-        /// </summary>
-        private void PrintGouJinList()
-        {
-            string strHTML = GetListToHtmlModelHTML("GJListPrintModel.html");//获取html内容
-            StringBuilder HTMLContent = new StringBuilder();
-            double DoubleMoney = 0;
-            if (inventorylist != null && inventorylist.Count > 0)
-            {
-                strHTML = strHTML.Replace("$$DateReplace", inventorylist[0].p_date.Value.ToString("yyyy-MM-dd"));
-                #region  组织表格填充内容
-                HTMLContent.Append("<tr><td>NO</dt><td>生产厂家</dt><td>品名</dt><td>规格型号</dt><td>批号</dt><td>单位</dt><td>单价</dt><td>数量</dt><td>金额(￥)</dt></tr>");
-                foreach (GouJinInfo _item in inventorylist)
-                {
-                    HTMLContent.Append("<tr>");
-                    HTMLContent.Append("<td>" + _item.ID + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_zzs + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_cpmc + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_ggxh + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_ph + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_dw + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_sl2 + "</td>");
-                    HTMLContent.Append("<td>" + _item.p_sl1.Value + "</td>");
-                    HTMLContent.Append("<td>" + TotalMoney(_item.p_sl1.Value, Convert.ToDouble(_item.p_sl2)) + "</td>");
-                    HTMLContent.Append("</tr>");
-                    DoubleMoney = DoubleMoney + (_item.p_sl1.Value * Convert.ToDouble(_item.p_sl2));
-                }
-                #endregion
-
-            }
-            strHTML = strHTML.Replace("$$MoneyReplace",DoubleMoney.ToString("n"));
-            strHTML = strHTML.Replace("$$Replace", HTMLContent.ToString());
-
-            string strAbstrctPageURL = "file://" + UIBLL.CommonFileManager.Instance.CreateTempFile(strHTML, "SellRecord20130921.html");
-            this.webBrowser1.Navigate(strAbstrctPageURL);
-        }
-
         /// <summary>
         /// 列表转换到html文件
         /// </summary>
